@@ -18,11 +18,11 @@ public class PlayCommand : PureMVC.Patterns.SimpleCommand
 		PlayerDataProxy playerData = Facade.RetrieveProxy(PlayerDataProxy.NAME) as PlayerDataProxy;
         if(playerData!=null)
         {
-			playerData.UpdatePlayerData(bonus.BonusLists[id].Reward,bonus.BonusLists[id].Name);
-			Debug.Log ("================PlayCommand");
+            playerData.GetReward(bonus.BonusLists[id].Reward,bonus.BonusLists[id].Name);
+            	Debug.Log ("================PlayCommand");
+
         }
 
-        //重新随机奖励列表
-		SendNotification(MyFacade.REFRESH_BONUS_ITEMS);
+      
     }
 }

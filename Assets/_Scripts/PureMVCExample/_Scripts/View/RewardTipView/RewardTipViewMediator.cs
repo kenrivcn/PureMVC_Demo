@@ -27,6 +27,9 @@ public class RewardTipViewMediator:PureMVC.Patterns.Mediator
 	public void OnClickBack()
 	{
 		View.gameObject.SetActive (false);
+
+		  //重新随机奖励列表
+		SendNotification(MyFacade.REFRESH_BONUS_ITEMS);
 	}
 		
 	/// <summary>
@@ -54,10 +57,9 @@ public class RewardTipViewMediator:PureMVC.Patterns.Mediator
 			if (!View.isActiveAndEnabled) {
 				View.gameObject.SetActive (true);
 			}
-
+			string text = notification.Body as string;
 			//update text
-			PlayerDataProxy data = notification.Body as PlayerDataProxy;
-			View.SetText (data.PlayerData.RewardInfo+""+data.PlayerData.RewardPrice);
+			View.SetText (text);
 
 			break;
 		}

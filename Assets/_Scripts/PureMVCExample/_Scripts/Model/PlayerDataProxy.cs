@@ -6,24 +6,21 @@ public class PlayerDataProxy : PureMVC.Patterns.Proxy {
 
     public new static string NAME = "PlayerData";
 
-
     public PlayerDataModel PlayerData;
 
     public PlayerDataProxy(string name)
         :base(name,null)
     {
-        PlayerData = new PlayerDataModel(0,0);
+        PlayerData = new PlayerDataModel();
     }
 
-	public void UpdatePlayerData(int reward,string info)
+	public void GetReward(int reward,string info)
     {
         PlayerData.PlayGameCount++;
         PlayerData.RewardTotal += reward;
-		PlayerData.RewardInfo = info;
-		PlayerData.RewardPrice = reward;
-
-        //发送消息 更新UI 通知订阅者
-		SendNotification(MyFacade.UPDATE_PLAYER_DATA,this);
+	
+        //发送消息 更新MainPanelView UI组件 通知订阅者
+		SendNotification(MyFacade.UPDATE_PLAYER_DATA,info+reward);
     }
 
 

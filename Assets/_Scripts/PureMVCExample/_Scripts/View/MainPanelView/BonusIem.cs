@@ -21,15 +21,15 @@ public class BonusIem : MonoBehaviour {
         bonusData = model;
         if(bonusData!=null)
         {
-            Desc.text = bonusData.Id + ",\n" + bonusData.Name + ",\n" + bonusData.Reward;
+            Desc.text = bonusData.Name + "\n" + bonusData.Reward;
         }
     }
 
 	private void RandomColor()
 	{
-		Color[] color = { Color.red, Color.green, Color.blue, Color.cyan, Color.white,Color.yellow,Color.gray};
+		Color[] color = {Color.white,Color.yellow};
 		int val = Random.Range (0, color.Length);
-		img.color = color [val];
+		img.color =color [val];
 
 	}
 }
