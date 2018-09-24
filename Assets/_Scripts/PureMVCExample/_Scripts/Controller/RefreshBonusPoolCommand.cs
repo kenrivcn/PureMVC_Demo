@@ -21,11 +21,19 @@ public class RefreshRewardPoolCommand : PureMVC.Patterns.SimpleCommand {
 			MainPanelMediator mediator = Facade.RetrieveMediator (MainPanelMediator.NAME) as MainPanelMediator;
 
 			//先清除已有的BonusItem
-			mediator.DestroyAll ();
+			//mediator.DestroyAll ();
+			bool newCreate = mediator.BonusItemCount == 0;
 
+			GameObject obj = null;
 			for (int i = 0; i < bonus.BonusLists.Count; ++i) {
-				GameObject obj = mediator.InstanceBonusItem ();
-				obj.SetActive (true);
+				if (newCreate) {
+					obj = mediator.InstanceBonusItem ();
+					obj.SetActive (true);
+				} else {
+					obj = mediator.BonusItem (i);
+				}
+
+				
 				BonusIem item = obj.GetComponent<BonusIem> ();
 				if (item != null) {
 					//更新Item

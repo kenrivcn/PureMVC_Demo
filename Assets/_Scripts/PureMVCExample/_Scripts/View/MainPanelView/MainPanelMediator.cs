@@ -38,15 +38,15 @@ public class MainPanelMediator : PureMVC.Patterns.Mediator {
         SendNotification (MyFacade.PLAY);
     }
 
-    public void DestroyAll () {
-        if (BonusItemLists.Count != 0) {
-            foreach (GameObject obj in BonusItemLists) {
-                GameObject.Destroy (obj);
+    // public void DestroyAll () {
+    //     if (BonusItemLists.Count != 0) {
+    //         foreach (GameObject obj in BonusItemLists) {
+    //             GameObject.Destroy (obj);
 
-            }
-        }
-        View.BonusItemTemplate.SetActive (false);
-    }
+    //         }
+    //     }
+    //     View.BonusItemTemplate.SetActive (false);
+    // }
 
     /// <summary>
     /// 监听消息
@@ -87,6 +87,16 @@ public class MainPanelMediator : PureMVC.Patterns.Mediator {
         BonusItemLists.Add (obj);
     }
 
+    public GameObject BonusItem(int index)
+    {
+        return BonusItemLists[index];
+    }
+
+    public int BonusItemCount{
+        get{
+            return BonusItemLists.Count;
+        }
+    }
     /// <summary>
     /// 创建bonus item
     /// </summary>

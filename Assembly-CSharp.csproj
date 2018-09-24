@@ -91,16 +91,16 @@
      <Compile Include="Assets\_Scripts\PureMVCFramework\Patterns\Observer\Observer.cs" />
      <Compile Include="Assets\_Scripts\PureMVCFramework\Patterns\Proxy\Proxy.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>D:/Git/mitty/PureMVC_Demo/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>D:/用户目录/我的文档/PureMVC_Demo/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Git/mitty/PureMVC_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/用户目录/我的文档/PureMVC_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/Git/mitty/PureMVC_Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/用户目录/我的文档/PureMVC_Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Git/mitty/PureMVC_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/用户目录/我的文档/PureMVC_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity2018.2.6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
